@@ -1,4 +1,4 @@
 community/CueBlocks/PopUp app/code/community/CueBlocks/PopUp
-modules/Hackathon_CustomUrls.xml app/etc/modules/CueBlocks_PopUp.xml
+modules/CueBlocks_PopUp.xml app/etc/modules/CueBlocks_PopUp.xml
 design/adminhtml/default/default/layout/popup.xml app/design/adminhtml/default/default/layout/popup.xml 
 design/adminhtml/default/default/template/popUp app/design/adminhtml/default/default/template/popUp
