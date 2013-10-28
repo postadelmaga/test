@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<!--
+ * @package     Cueblocks_popup
+ * @company     Cueblocks
+ * @author      Francesco Magazzu' <francesco.magazzu at cueblocks.com>
+ -->
+
+<layout>
+    <adminhtml_cbpopup_index>
+        <reference name="content">
+            <block type="popUp/adminhtml_popUp" name="popup.index" />
+        </reference>
+    </adminhtml_cbpopup_index>
+    <adminhtml_cbpopup_grid>
+        <block type="popUp/adminhtml_popUp_grid" name="popup.grid" output="toHtml"></block>
+    </adminhtml_cbpopup_grid>
+
+    <adminhtml_cbpopup_edit>
+        <reference name="head">
+            <action method="setCanLoadExtJs"><flag>1</flag></action>
+            <action method="addJs"><script>mage/adminhtml/wysiwyg/widget.js</script></action>
+            <action method="addItem"><type>js</type><name>prototype/window.js</name></action>
+            <action method="addItem"><type>js_css</type><name>prototype/windows/themes/default.css</name></action>
+            <action method="addCss"><name>lib/prototype/windows/themes/magento.css</name></action>
+        </reference>
+        <reference name="content">
+            <block type="popUp/adminhtml_popUp_edit" name="popup.edit"/>
+        </reference>
+        <reference name="left">
+            <block type="popUp/adminhtml_popUp_edit_tabs" name="popup_instance_edit_tabs">
+                <!--<block type="popUp/adminhtml_popUp_edit_tab_settings" name="popUp_edit_tab_settings" />-->
+                <block type="popUp/adminhtml_popUp_edit_tab_main" name="popUp_edit_tab_main" />
+                <!--<action method="addTab"><name>settings_section</name><block>popUp_edit_tab_settings</block></action>-->
+                <action method="addTab"><name>main_section</name><block>popUp_edit_tab_main</block></action>
+                <!--<block type="widget/adminhtml_widget_instance_edit_tab_properties" name="widget_instance_edit_tab_properties" />-->
+                <!--<action method="addTab"><name>properties_section</name><block>widget_instance_edit_tab_properties</block></action>-->
+            </block>
+        </reference>
+        <reference name="js">
+            <block type="adminhtml/template" template="widget/instance/js.phtml" name="widget_instance_js"></block>
+        </reference>
+    </adminhtml_cbpopup_edit>
+
+    <adminhtml_cbpopup_new>
+        <reference name="content">
+            <block type="popUp/adminhtml_popUp_edit" name="popup.edit"/>
+        </reference>
+    </adminhtml_cbpopup_new>
+</layout>

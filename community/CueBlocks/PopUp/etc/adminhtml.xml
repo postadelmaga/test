@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<!--
+* @package     CueBlocks_PopUp
+* @company     CueBlocks
+* @author      Francesco Magazzu' <francesco.magazzu at cueblocks.com>
+-->
+<config>
+    <menu>
+        <cms>
+            <children>
+                <popUp translate="title" module="popUp">
+                    <title>PopUp</title>
+                    <sort_order>190</sort_order>
+                    <children>
+                        <managepopupenhanced module="popUp">
+                            <title>Manage Popup(s)</title>
+                            <action>adminhtml/cbPopUp/</action>
+                            <sort_order>10</sort_order>
+                        </managepopupenhanced>
+                    </children>
+                    <children>
+                        <settingpopupenhanced module="popUp">
+                            <title>Settings</title>
+                            <action>adminhtml/system_config/edit/section/popUp/</action>
+                            <sort_order>20</sort_order>
+                        </settingpopupenhanced>
+                    </children>
+                </popUp>
+            </children>
+        </cms>
+    </menu>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <cms>
+                        <children>
+                            <popUp translate="title" module="popUp">
+                                <title>PopUp</title>
+                                <children>
+                                    <managepopupenhanced module="popUp">
+                                        <title>Manage Popup(s)</title>
+                                    </managepopupenhanced>
+                                </children>
+                                <children>
+                                    <settingpopupenhanced   module="popUp">
+                                        <title>Settings</title>
+                                    </settingpopupenhanced>
+                                </children>
+                            </popUp>
+                        </children>
+                    </cms>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <popUp translate="title" module="popUp">
+                                        <title>Popup Enhanced Settings</title>
+                                    </popUp>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>
